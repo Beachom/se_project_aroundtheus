@@ -82,15 +82,13 @@
 
 @media screen and (max-width: 320px) {
   .profile {
-    flex-direction: row;
+    flex-direction: row; /* If you want items to stack vertically */
     flex-wrap: wrap;
-    width: 282px;
     justify-content: center;
     padding-bottom: 36px;
     padding-left: 19px;
     padding-right: 19px;
     margin: 0;
-    width: 100%;
   }
 
   .profile__info {
@@ -101,29 +99,28 @@
     width: 282px;
     margin: auto;
     padding-top: 30px;
+    /* Removed fixed width to account for padding in .profile */
   }
 
   .profile__title {
     font-size: 22px;
     line-height: 26.63px;
-    justify-content: center;
-    display: flex;
   }
 
   .profile__subtitle {
-    align-self: center;
-    padding-bottom: 36px;
-    padding-top: 14px;
+    justify-content: center;
+    display: flex;
+    width: 100%; /* Ensure text aligns center without being constrained */
     line-height: 16.94px;
     font-size: 14px;
+    padding-bottom: 36px;
   }
 
   .profile__add-button {
-    width: 282px;
+    width: 282px; /* Adjust this based on actual content width or keep it 100% if it should stretch */
     padding: 0;
-    margin-left: auto;
+    margin: 0 auto; /* Center the button */
   }
-
   .profile__edit-button {
     height: 18px;
     width: 18px;
