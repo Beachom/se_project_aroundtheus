@@ -1,31 +1,24 @@
-.pages {
+.page {
   background-color: black;
   color: white;
 }
 
-.pages__section {
+.page__section {
   max-width: 880px;
   width: 100%;
   position: relative;
-  margin: 0 200px;
-  padding: 0;
+  margin: 0 auto;
 }
 
-.pages__content {
+.page__content {
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
   min-height: 100vh;
 }
 
-@media screen and (max-width: 480px) {
-  .pages__section {
-    max-width: 282px;
+@media screen and (max-width: 620px) {
+  .page__content {
     padding: 0;
-    margin-left: 19px;
-    margin-right: 19px;
-    margin-top: 0;
-    width: 100%;
-    position: relative;
-    overflow-x: hidden;
   }
 }
