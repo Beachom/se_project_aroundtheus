@@ -78,7 +78,7 @@
   }
 }
 
-@media screen and (min-width: 321px) and (max-width: 768px) {
+@media screen and (min-width: 321px) and (max-width: 800px) {
   .card__list {
     padding: 0px;
     display: flex;

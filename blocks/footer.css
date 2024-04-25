@@ -16,7 +16,7 @@
   }
 }
 
-@media screen and (min-width: 321px) and (max-width: 768px) {
+@media screen and (min-width: 321px) and (max-width: 800px) {
   .footer {
     display: flex;
     max-width: 564px;

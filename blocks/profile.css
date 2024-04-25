@@ -161,7 +161,7 @@
   }
 }
 
-@media screen and (min-width: 321px) and (max-width: 768px) {
+@media screen and (min-width: 321px) and (max-width: 800px) {
   .profile {
     display: flex;
     flex-direction: column;
