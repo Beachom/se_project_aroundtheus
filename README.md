@@ -5,6 +5,8 @@ This is a project using HTML/CSS and was created off of a Figma design
 
 You can view the site here: https://Beachom.github.io/se_project_aroundtheus
 
+Link to the video overview: https://youtu.be/dlbwZbMcqlM
+
 ### Overview
 
 - Intro
