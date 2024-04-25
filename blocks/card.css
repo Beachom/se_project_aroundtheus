@@ -1,97 +1,49 @@
-.card__list {
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 282px);
-  grid-template-rows: repeat(2, 361px);
-  grid-column-gap: 17px;
-  grid-row-gap: 20px;
-  background-color: black;
-  list-style-type: none;
-  justify-content: normal;
-  max-width: 880px;
-}
-
 .card {
-  height: 361px;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-}
-
-.card__description {
-  background-color: white;
-  color: black;
-  border-radius: 0 0 25px 25px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px 0 20px;
-  min-height: 79px;
-}
-
-.card__title {
-  font-weight: 900;
-  font-size: 24px;
-  line-height: 1.2;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+  text-align: center;
 }
 
 .card__image {
   width: 282px;
   height: 282px;
-  border-radius: 25px 25px 0 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card__title {
+  margin: 0;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29.05px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 220px;
+}
+
+.card__description {
+  display: flex;
+  background-color: white;
+  color: black;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  max-width: 282px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .card__like-button {
-  transition: opacity 0.4s;
+  height: 18px;
+  width: 21px;
+  background: transparent url(../images/like.svg) center no-repeat;
   border: none;
-  height: 21px;
-  width: 18px;
-  background-color: white;
-  cursor: pointer;
 }
 
 .card__like-button:hover {
-  opacity: 0.6;
-}
-
-@media screen and (max-width: 320px) {
-  .card__list {
-    padding: 0px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgb(0, 0, 0);
-    list-style-type: none;
-    justify-content: center;
-    max-width: 880px;
-  }
-
-  .card {
-    max-height: 361px;
-    display: flex;
-    flex-direction: column;
-    max-width: 282px;
-  }
-}
-
-@media screen and (min-width: 321px) and (max-width: 800px) {
-  .card__list {
-    padding: 0px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgb(0, 0, 0);
-    list-style-type: none;
-    justify-content: center;
-    min-width: 581px;
-  }
-
-  .card {
-    max-width: 282px;
-    margin: 0;
-    padding: 0;
-  }
+  opacity: 0.5;
+  cursor: pointer;
 }
