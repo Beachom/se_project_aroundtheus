@@ -15,11 +15,10 @@
   margin: 0;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 580px) {
   .cards__list {
     margin: 0;
-    padding-left: 19px;
-    padding-right: 19px;
+    padding-top: 36px;
     /* justify-content: start; */
   }
 }

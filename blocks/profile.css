@@ -103,7 +103,7 @@
     line-height: 26.63px;
     text-align: center;
     justify-content: center;
-    max-width: 100%;
+    max-width: 196px;
     overflow-wrap: break-word;
   }
 
@@ -114,8 +114,7 @@
     padding-bottom: 36px;
     justify-content: center;
     text-align: center;
-    width: 100%; /* Ensure text aligns center without being constrained */
-    max-width: 100%;
+    max-width: 282px;
     overflow-wrap: break-word;
   }
 
