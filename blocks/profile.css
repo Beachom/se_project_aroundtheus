@@ -105,16 +105,20 @@
   .profile__title {
     font-size: 22px;
     line-height: 26.63px;
-    justify-content: center;
-    display: flex;
+    text-align: center;
+    max-width: 100%;
+    overflow-wrap: break-word;
   }
 
   .profile__subtitle {
+    line-height: 16.94px;
+    font-size: 14px;
     padding-top: 14px;
-    padding-bottom: 50px;
-    justify-content: center;
-    display: flex;
+    padding-bottom: 36px;
+    text-align: center;
     width: 100%; /* Ensure text aligns center without being constrained */
+    max-width: 100%;
+    overflow-wrap: break-word;
   }
 
   .profile__add-button {
@@ -132,7 +136,7 @@
 }
 
 @media screen and (min-width: 321px) and (max-width: 800px) {
-  .profile__add-button {
-    margin-left: auto;
+  .profile__edit-button {
+    margin-right: 10px;
   }
 }

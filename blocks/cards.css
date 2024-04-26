@@ -18,22 +18,13 @@
 @media screen and (max-width: 320px) {
   .cards__list {
     margin: 0;
-    padding: 0;
     padding-left: 19px;
     padding-right: 19px;
     /* justify-content: start; */
   }
-
-  .cards {
-    padding: 0;
-  }
 }
 
 @media screen and (min-width: 321px) and (max-width: 800px) {
-  .cards {
-    padding-left: 0;
-  }
-
   .cards__list {
     width: 100%;
   }
