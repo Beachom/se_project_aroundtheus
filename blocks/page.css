@@ -8,9 +8,3 @@
 .page__content {
   margin: 0 auto;
 }
-
-@media screen and (min-width: 321px) and (max-width: 800px) {
-  .page__content {
-    margin: 0 auto;
-  }
-}

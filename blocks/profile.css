@@ -80,15 +80,11 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 580px) {
   .profile {
     flex-direction: row; /* If you want items to stack vertically */
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 36px;
-    padding-left: 19px;
-    padding-right: 19px;
-    margin: 0;
     max-width: 282px;
   }
 
@@ -106,6 +102,7 @@
     font-size: 22px;
     line-height: 26.63px;
     text-align: center;
+    justify-content: center;
     max-width: 100%;
     overflow-wrap: break-word;
   }
@@ -115,6 +112,7 @@
     font-size: 14px;
     padding-top: 14px;
     padding-bottom: 36px;
+    justify-content: center;
     text-align: center;
     width: 100%; /* Ensure text aligns center without being constrained */
     max-width: 100%;
@@ -135,7 +133,7 @@
   }
 }
 
-@media screen and (min-width: 321px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .profile__edit-button {
     margin-right: 10px;
   }
