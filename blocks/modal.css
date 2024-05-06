@@ -105,6 +105,10 @@
   background-size: contain;
 }
 
+.modal__close:hover {
+  opacity: 0.5;
+}
+
 @media screen and (max-width: 700px) {
   .modal__close {
     top: -45px;
