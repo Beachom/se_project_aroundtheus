@@ -1,5 +1,6 @@
 .card {
   text-align: center;
+  position: relative;
 }
 
 .card__image {
@@ -51,4 +52,20 @@
 .card__like-button:hover {
   opacity: 0.5;
   cursor: pointer;
+}
+
+.card__delete-button {
+  position: absolute;
+  background-image: url(../images/Trash.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 0.4s;
+  border: none;
+  height: 19.3px;
+  width: 18px;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 0;
+  top: 18px;
+  right: 15px;
 }

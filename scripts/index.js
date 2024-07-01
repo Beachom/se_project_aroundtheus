@@ -25,8 +25,10 @@ const initialCards = [
   },
 ];
 
+// Log initial cards to console
 console.log(initialCards);
 
+// Profile Edit Modal Elements
 const profileEditButton = document.querySelector("#profile-edit-button");
 const profileEditModal = document.querySelector("#profile-edit-modal");
 const profileTitle = document.querySelector(".profile__title");
@@ -36,12 +38,15 @@ const profileDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
 const profileEditForm = profileEditModal.querySelector(".modal__form");
+const modalCloseButton = document.querySelector("#modal-close-button");
+const addNewCardButton = document.querySelector(".profile-add-button");
+
+// Card Elements
 const cardListEl = document.querySelector(".cards__list");
 const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
 
 // Functions
-
 function closePopup() {
   profileEditModal.classList.remove("modal_open");
 }
@@ -50,26 +55,30 @@ function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardTitleEl = cardElement.querySelector(".card__title");
+  const profileCardDeleteButton = document.querySelector(
+    ".card__delete-button"
+  );
 
   cardImageEl.src = cardData.link;
-
   cardImageEl.alt = cardData.name;
-
   cardTitleEl.textContent = cardData.name;
+
+  // Delete Button Functionality
+  profileCardDeleteButton.addEventListener("click", handleDeleteCard);
 
   return cardElement;
 }
 
-// Event Listeners
+function handleDeleteCard(event) {
+  event.target.closest(".card").remove();
+}
 
+// Event Listeners
 profileEditButton.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileSubtitle.textContent;
-
   profileEditModal.classList.add("modal_open");
 });
-
-const modalCloseButton = document.querySelector("#modal-close-button");
 
 modalCloseButton.addEventListener("click", () => {
   closePopup();
@@ -82,14 +91,22 @@ profileEditForm.addEventListener("submit", (e) => {
   closePopup();
 });
 
+// Initial Card Rendering
 initialCards.forEach((cardData) => {
   const cardElement = getCardElement(cardData);
   cardListEl.prepend(cardElement);
 });
 
+// Like Button Functionality
 const likeButtons = document.querySelectorAll(".card__like-button");
 likeButtons.forEach((likeButton) => {
   likeButton.addEventListener("click", () => {
     likeButton.classList.toggle("card__like-button_active");
   });
 });
+
+// Delete Button Functionality
+// const profileCardDeleteButton = document.querySelector(".card__delete-button");
+// profileCardDeleteButton.addEventListener("click", (event) => {
+//   event.target.closest(".card").remove();
+// });
