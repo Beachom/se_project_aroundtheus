@@ -3,8 +3,8 @@
   background-color: rgba(0, 0, 0, 0.5);
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: 999;
   padding: 0 19px;
   display: flex;
@@ -17,6 +17,7 @@
 .modal_open {
   visibility: visible;
   opacity: 1;
+  transition: visibility 0s linear 0, 5s opacity 0.5s linear;
 }
 
 .modal__heading {
@@ -43,6 +44,7 @@
   max-width: 430px;
   max-height: 330px;
   padding-bottom: 36.51px;
+  transition: visibility 0s linear 0, 5s opacity 0, 5s linear;
 }
 
 .modal__button {
@@ -101,18 +103,17 @@
 .modal__image {
   width: 433px;
   height: 540px;
-  position: relative;
-  margin: auto;
   display: block;
 }
 
-.modal__container {
+.modal__content {
   display: flex;
   justify-content: center;
   align-items: center;
   max-height: 75vh;
   max-width: 75vw;
-  width: 100%;
+  position: relative;
+  margin: auto;
 }
 
 @media screen and (max-width: 700px) {
