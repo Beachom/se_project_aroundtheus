@@ -93,6 +93,10 @@ profileEditButton.addEventListener("click", () => {
   profileEditModal.classList.add("modal_open");
 });
 
+addNewCardButton.addEventListener("click", () => {
+  addCardModal.classList.add("modal_open");
+});
+
 modalCloseButton.addEventListener("click", () => {
   closePopup();
 });
