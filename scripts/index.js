@@ -39,6 +39,8 @@ const profileEditForm = profileEditModal.querySelector(".modal__form");
 const modalCloseButtons = document.querySelectorAll(".modal__close-button");
 const addNewCardButton = document.querySelector(".profile__add-button");
 const addCardFormElement = addCardModal.querySelector(".modal__form");
+const cardTitleInput = document.querySelector("#card-title-input");
+const cardUrlInput = document.querySelector("#card-url-input");
 
 // Picture Modal Elements
 const pictureModal = document.querySelector("#picture-modal");
@@ -46,6 +48,7 @@ const pictureModalCloseButton = document.querySelector(
   "#picture-modal-close-button"
 );
 const modalImage = document.querySelector("#modal-image");
+const modalCaption = document.querySelector("#modal-caption");
 
 // Card Elements
 const cardListEl = document.querySelector(".cards__list");
@@ -78,6 +81,7 @@ function getCardElement(cardData) {
   cardImageEl.addEventListener("click", () => {
     modalImage.src = cardData.link;
     modalImage.alt = cardData.name;
+    modalCaption.textContent = cardData.name;
     openPopup(pictureModal);
   });
 
